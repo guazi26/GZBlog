@@ -1,6 +1,7 @@
 package org.guazi26.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.guazi26.domain.ResponseResult;
 import org.guazi26.domain.entity.Article;
 
 /**
@@ -11,5 +12,10 @@ import org.guazi26.domain.entity.Article;
  */
 public interface ArticleService extends IService<Article> {
 
+    ResponseResult hotArticleList();
+
+    ResponseResult articleList(Integer pageNum, Integer pageSize, Long categoryId);
+
+    ResponseResult getArticleDetail(Long id);
 }
 
