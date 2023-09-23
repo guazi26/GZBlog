@@ -111,7 +111,6 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleDao, Article> impleme
 
         if (category != null) {
             article.setCategoryName(category.getName());
-
         }
         ArticleDetailVo articleDetailVo = BeanCopyUtils.copyBean(article, ArticleDetailVo.class);
 
